@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0",
+    "docker-build": "docker build -t mozacaps-client:dev .",
+    "docker-run": "docker run -d --name mozacaps-client -p 4200:4200 mozacaps-client:dev",
+    "docker-stop": "docker stop mozacaps-client",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
